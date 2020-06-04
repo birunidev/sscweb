@@ -492,6 +492,7 @@ img {
     text-align: left;
     -webkit-transform: translate(100px, -300px);
             transform: translate(100px, -300px);
+    width: 50%;
   }
 }
 
@@ -512,6 +513,12 @@ img {
   }
 }
 
+@media (min-width: 900px) {
+  .jumbo-text h1 {
+    font-size: 2.3rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .jumbo-text h1 {
     font-size: 2.5rem;
@@ -527,6 +534,12 @@ img {
   .jumbo-text h3 {
     font-size: 1.3rem;
     font-weight: 400;
+  }
+}
+
+@media (min-width: 900px) {
+  .jumbo-text h3 {
+    font-size: 1.5rem;
   }
 }
 
@@ -837,7 +850,7 @@ img {
   width: 100%;
   top: -50px;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   opacity: 0;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -1080,7 +1093,7 @@ ul {
 
 body {
   font-family: "Roboto", sans-serif;
-  height: 200vh;
+  overflow-x: hidden;
 }
 
 button {

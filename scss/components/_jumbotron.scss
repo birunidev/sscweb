@@ -1,4 +1,3 @@
-
 .jumbo-text {
   position: relative;
   z-index: 1;
@@ -22,6 +21,7 @@
     -o-transform: translate(100px, -300px);
     -ms-transform: translate(100px, -300px);
     transform: translate(100px, -300px);
+    width: 50%;
   }
 
   h1,
@@ -35,6 +35,9 @@
       font-weight: 100;
       font-size: 2rem;
     }
+    @include tablet-landscape-up {
+      font-size: 2.3rem;
+    }
     @include desktop {
       font-size: 2.5rem;
     }
@@ -45,6 +48,9 @@
     @include tablet-portrait-up {
       font-size: 1.3rem;
       font-weight: 400;
+    }
+    @include tablet-landscape-up {
+      font-size: 1.5rem;
     }
     @include desktop {
       font-size: 1.5rem;

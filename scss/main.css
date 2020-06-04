@@ -442,6 +442,8 @@ a {
   z-index: -4;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
 }
 
 @media (min-width: 1200px) {
@@ -623,6 +625,8 @@ a {
 .tabs-container .tab-item {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
 }
 
 #post-cards {
@@ -653,8 +657,10 @@ a {
 }
 
 .post-card__image img {
-  -webkit-transition: 0.8s ease;
-  transition: 0.8s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
   width: 100%;
 }
 
@@ -803,6 +809,8 @@ a {
   opacity: 0;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
 }
 
 .custom-header.scrolled {
@@ -837,9 +845,6 @@ a {
 }
 
 .custom-navbar__brand .nav-logo {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1/3;
   width: 50px;
 }
 
@@ -908,6 +913,8 @@ a {
   width: 100px;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
   top: 10px;
   left: 30px;
   opacity: 0;
@@ -938,6 +945,8 @@ a {
   background: #fcd44e;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
 }
 
 .navbar-box__btn p,
@@ -989,6 +998,8 @@ a {
   height: 100vh;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
 }
 
 @media (min-width: 1200px) {

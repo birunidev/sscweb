@@ -1,0 +1,20 @@
+.owl-dots {
+  -ms-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -o-transform: translateY(-100px);
+
+  transform: translateY(-100px);
+}
+.owl-dot {
+  span {
+    border: 1px solid white;
+    background: transparent !important;
+  }
+  &.active {
+    span {
+      border: 1px solid $orangeColor;
+
+      background: $orangeColor !important;
+    }
+  }
+}

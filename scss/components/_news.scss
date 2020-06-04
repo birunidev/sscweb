@@ -1,0 +1,48 @@
+
+.upcoming-news {
+  margin: 20px 0;
+  font-family: "Roboto";
+  font-weight: 100 !important;
+  h2 {
+    margin: 0;
+    font-size: 1rem;
+    @include tablet-landscape-up {
+      font-size: 1.4rem;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    @include tablet-landscape-up {
+      font-size: 1rem;
+    }
+  }
+  .news-details {
+    a {
+      text-decoration: underline !important;
+    }
+  }
+}
+
+.news-comp {
+  border-left: 4px solid $primaryBlue;
+  padding-left: 20px;
+
+  &__date {
+    font-weight: 100;
+    font-size: 1rem;
+  }
+  &__title {
+    font-weight: bold;
+  }
+}
+
+.newsletter {
+  font-family: "Roboto";
+  font-weight: 100;
+}
+.maps {
+  iframe {
+    max-width: 100%;
+  }
+}

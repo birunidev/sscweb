@@ -1,0 +1,77 @@
+// search form component
+
+.search-form {
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  left: 0;
+  opacity: 0;
+  background: $orangeColor;
+
+  padding: 10px;
+  z-index: -4;
+  transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+
+  @include desktop {
+    padding: 10px 40px;
+
+    background: $darkBlue;
+  }
+
+  input,
+  input::placeholder,
+  button {
+    color: white;
+  }
+  input {
+    border: none;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    font-weight: bold;
+    margin-left: 20px;
+  }
+
+  &.active {
+    -moz-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    -o-transform: translateY(40px);
+    transform: translateY(40px);
+    @include desktop {
+      -moz-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+      -o-transform: translateY(50px);
+      transform: translateY(50px);
+    }
+    opacity: 1;
+  }
+}
+
+.search-box {
+  display: none;
+  @include desktop {
+    display: block;
+    z-index: 3;
+    position: fixed;
+    top: 30px;
+    right: 100px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  // max-width: 300px;
+  input {
+    border: 1px solid $primaryBlue;
+    padding: 5px 10px;
+  }
+  button {
+    padding: 0;
+    color: $primaryBlue;
+    font-size: 1.2rem;
+  }
+}

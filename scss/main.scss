@@ -7,8 +7,14 @@
 @import "./utils/mixins";
 
 // components
-@import "./components";
+
+@import "./components/containers";
+@import "./components/carousels";
+@import "./components/jumbotron";
 @import "./components/loading";
+@import "./components/news";
+@import "./components/post";
+@import "./components/search-form";
 
 // layouts
 @import "./layout/footer";

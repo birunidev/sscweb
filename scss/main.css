@@ -739,6 +739,10 @@ img {
   }
 }
 
+.upcoming-news .news-details a {
+  text-decoration: underline !important;
+}
+
 .news-comp {
   border-left: 4px solid #0171bb;
   padding-left: 20px;
@@ -848,11 +852,12 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    align-items: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
   }
 }
 
@@ -861,11 +866,12 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
 }
 
 .custom-navbar__brand .nav-logo {
@@ -904,11 +910,12 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    align-items: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
   }
   .custom-navbar__list .nav-items .nav-item {
     margin-right: 10px;

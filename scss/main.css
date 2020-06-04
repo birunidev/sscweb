@@ -401,6 +401,11 @@ a {
   cursor: pointer;
 }
 
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
 .text-blue {
   color: #0171bb;
 }

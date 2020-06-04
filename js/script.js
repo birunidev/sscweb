@@ -13,7 +13,7 @@ let navList = [
   "Social",
 ];
 
-const navListComp = (hasSearchBtn) => {
+const navListComp = (hasSearchBtn, forMobile) => {
   // let navUl = `<ul class="nav-items">
   // </ul>`
 
@@ -23,18 +23,22 @@ const navListComp = (hasSearchBtn) => {
     <a class="nav-item__link" href="#">${list}</a>
   </li>`;
   });
-  if (!hasSearchBtn) {
-    return `<ul class="nav-items">${navLi} </ul>`;
-  } else {
-    return `<ul class="nav-items">${navLi} <li class="nav-item-search" id="btn-search-desktop">
-    <button class="btn"><i class="fas fa-search"></i></button>
-  </li> </ul>`;
-  }
+
+  let closeBtn =
+    '<button class="sidedrawer-close-btn btn" aria-expanded="false" aria-controls="side-drawer" aria-label="Close SideDrawer" > <i class="fas fa-times"></i></button>';
+
+  let searchBtn = `<li class="nav-item-search" id="btn-search-desktop">
+  <button class="btn"><i class="fas fa-search"></i></button>
+</li>`;
+
+  return `${forMobile ? closeBtn : ""} <ul class="nav-items">${navLi} ${
+    hasSearchBtn ? searchBtn : ""
+  } </ul>`;
 };
 
 // Render Nav list to sidedrawer and navbar component
-const sideDrawer = $(".sidedrawer").html(navListComp(false));
-const navListGeneral = $("#nav-list-general").html(navListComp(true));
+const sideDrawer = $(".sidedrawer").html(navListComp(false, true));
+const navListGeneral = $("#nav-list-general").html(navListComp(true, false));
 
 // Jquery Event Listener
 $(document).ready(function () {
@@ -78,31 +82,75 @@ $(document).ready(function () {
 
   // Bars Icon Click Handler
   const backDrop = $(".backdrop");
+  const barsBtn = $("#bars-btn");
+  const sideDrawerCloseBtn = $(".sidedrawer-close-btn");
 
-  $("#bars-btn").click(function () {
+  barsBtn.click(function () {
     sideDrawer.toggleClass("active");
     backDrop.toggleClass("active");
+    if (sideDrawer.hasClass("active")) {
+      $(this).attr("aria-expanded", true);
+      sideDrawerCloseBtn.attr("aria-expanded", true);
+    } else {
+      $(this).attr("aria-expanded", false);
+      sideDrawerCloseBtn.attr("aria-expanded", false);
+    }
   });
 
   // backdrop click handler
+
+  // Sidedrawer Close Button Click Handler
+  sideDrawerCloseBtn.click(function () {
+    sideDrawer.removeClass("active");
+    backDrop.removeClass("active");
+    if (sideDrawer.hasClass("active")) {
+      $(this).attr("aria-expanded", true);
+      barsBtn.attr("aria-expanded", true);
+    } else {
+      $(this).attr("aria-expanded", false);
+      barsBtn.attr("aria-expanded", false);
+    }
+  });
+
   backDrop.click(function () {
     sideDrawer.removeClass("active");
     backDrop.removeClass("active");
+    barsBtn.attr("aria-expanded", false);
+    sideDrawerCloseBtn.attr("aria-expaned", false);
   });
 
   // mobile search button click handler
+  const searchFormMobile = $("#search-form-mobile");
   $("#search-btn-mobile").click(function () {
-    $("#search-form-mobile").toggleClass("active");
+    searchFormMobile.toggleClass("active");
+
+    if (searchFormMobile.hasClass("active")) {
+      $(this).attr("aria-expanded", true);
+    } else {
+      $(this).attr("aria-expanded", false);
+    }
   });
 
   // desktop search button click handler
   $("#btn-search-desktop").click(function () {
-    $("#search-form-mobile").toggleClass("active");
+    searchFormMobile.toggleClass("active");
+
+    if (searchFormMobile.hasClass("active")) {
+      $(this).attr("aria-expanded", true);
+    } else {
+      $(this).attr("aria-expanded", false);
+    }
   });
 
   // desktop search box button click handler
+  let searchBoxInput = $("#search-box-input");
   $("#search-box-btn").click(function () {
-    $("#search-box-input").toggleClass("d-none").fadeIn(600);
+    searchBoxInput.toggleClass("d-none").fadeIn(600);
+    if (searchBoxInput.hasClass("d-none")) {
+      $(this).attr("aria-expanded", "false");
+    } else {
+      $(this).attr("aria-expanded", "true");
+    }
   });
 
   // box menu button click handler
@@ -112,20 +160,26 @@ $(document).ready(function () {
     navBoxBtn.toggleClass("show-menu");
 
     if (navBoxBtn.hasClass("show-menu")) {
+      $("#menu-btn").attr("aria-expanded", true);
       $("#nav-box-items").html(navListComp()).fadeIn(600);
+      $("#chevron-icon").attr("class", "fas fa-chevron-up");
     } else {
+      $("#menu-btn").attr("aria-expanded", true);
       $("#nav-box-items").html("").fadeOut(600);
+      $("#chevron-icon").attr("class", "fas fa-chevron-down");
     }
   });
 
   // read more button click handler
   let readMoreBtn = $("#read-more-btn");
-  readMoreBtn.click(() => {
+  readMoreBtn.click(function () {
     let moreContentWrapper = $("#more-content");
     moreContentWrapper.toggleClass("d-none");
     if (moreContentWrapper.hasClass("d-none")) {
       readMoreBtn.html(`Read More <i class="fas fa-plus"></i> `);
+      $(this).attr("aria-expanded", false);
     } else {
+      $(this).attr("aria-expanded", true);
       readMoreBtn.html(`Read Less <i class="fas fa-minus"></i> `);
     }
   });

@@ -676,7 +676,6 @@ a {
 }
 
 .post-card__details .title:hover {
-  text-decoration: none;
   color: #0171bb !important;
 }
 

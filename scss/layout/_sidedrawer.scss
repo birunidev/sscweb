@@ -1,0 +1,37 @@
+.sidedrawer {
+  z-index: 3;
+  background: $yellowColor;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  right: -400px;
+  padding: 100px 30px;
+  height: 100vh;
+  transition: 0.4s ease;
+  @include desktop {
+    right: -1000px;
+  }
+  ul {
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+.sidedrawer.active {
+  opacity: 1;
+  right: 0;
+}
+.backdrop {
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.backdrop.active {
+  z-index: 2;
+  opacity: 1;
+}

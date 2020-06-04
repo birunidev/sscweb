@@ -1,0 +1,247 @@
+.custom-container {
+  width: 95%;
+  margin: 0 auto;
+  @include tablet-portrait-up {
+    width: 90%;
+  }
+  @include desktop {
+    width: 80;
+  }
+}
+
+// search form component
+
+.search-form {
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  left: 0;
+  opacity: 0;
+  background: $orangeColor;
+
+  padding: 10px;
+  z-index: -4;
+  transition: 0.4s ease;
+
+  @include desktop {
+    padding: 10px 40px;
+
+    background: $darkBlue;
+  }
+
+  input,
+  input::placeholder,
+  button {
+    color: white;
+  }
+  input {
+    border: none;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    font-weight: bold;
+    margin-left: 20px;
+  }
+
+  &.active {
+    transform: translateY(40px);
+    @include desktop {
+      transform: translateY(50px);
+    }
+    opacity: 1;
+  }
+}
+
+.search-box {
+  display: none;
+  @include desktop {
+    display: block;
+    z-index: 3;
+    position: fixed;
+    top: 30px;
+    right: 100px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  // max-width: 300px;
+  input {
+    border: 1px solid $primaryBlue;
+    padding: 5px 10px;
+  }
+  button {
+    padding: 0;
+    color: $primaryBlue;
+    font-size: 1.2rem;
+  }
+}
+
+.jumbo-text {
+  position: relative;
+  z-index: 1;
+  transform: translate(0px, -250px);
+  text-align: center;
+
+  @include tablet-portrait-up {
+    transform: translate(0px, -400px);
+  }
+  @include desktop {
+    text-align: left;
+    transform: translate(100px, -300px);
+  }
+
+  h1,
+  h3 {
+    color: white;
+  }
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    @include tablet-portrait-up {
+      font-weight: 100;
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 2.5rem;
+    }
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    @include tablet-portrait-up {
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.owl-dots {
+  transform: translateY(-100px);
+}
+.owl-dot {
+  span {
+    border: 1px solid white;
+    background: transparent !important;
+  }
+  &.active {
+    span {
+      border: 1px solid $orangeColor;
+
+      background: $orangeColor !important;
+    }
+  }
+}
+
+.tabs-container {
+  width: 100%;
+  @include tablet-portrait-up {
+    width: 50%;
+  }
+
+  .tab-item {
+    transition: 0.4s ease;
+  }
+}
+
+#post-cards {
+  padding: 0;
+}
+.post-card {
+  max-width: 300px;
+  text-align: center;
+  margin: 10px auto;
+
+  @include desktop {
+    margin: 10px 0px;
+  }
+
+  &__image {
+    width: 100%;
+    overflow: hidden;
+    @include tablet-portrait-up {
+      max-height: 180px;
+    }
+    img {
+      transition: 0.8s ease;
+
+      &:hover {
+        transform: scale(1.09);
+      }
+      width: 100%;
+    }
+  }
+  &__details {
+    font-family: "Open sans";
+
+    .title {
+      margin: 5px 0;
+      font-weight: 300;
+      font-size: 1rem;
+      display: block;
+      color: black !important;
+      &:hover {
+        text-decoration: none;
+        color: $primaryBlue !important;
+      }
+    }
+    .separator {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: $yellowColor;
+      margin: 10px auto;
+    }
+    .excerpt {
+      font-weight: bold;
+    }
+  }
+}
+
+.upcoming-news {
+  margin: 20px 0;
+  font-family: "Roboto";
+  font-weight: 100 !important;
+  h2 {
+    margin: 0;
+    font-size: 1rem;
+    @include tablet-landscape-up {
+      font-size: 1.4rem;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    @include tablet-landscape-up {
+      font-size: 1rem;
+    }
+  }
+}
+
+.news-comp {
+  border-left: 4px solid $primaryBlue;
+  padding-left: 20px;
+
+  &__date {
+    font-weight: 100;
+    font-size: 1rem;
+  }
+  &__title {
+    font-weight: bold;
+  }
+}
+
+.newsletter {
+  font-family: "Roboto";
+  font-weight: 100;
+}
+.maps {
+  iframe {
+    max-width: 100%;
+  }
+}

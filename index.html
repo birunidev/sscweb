@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Singapore Swimming Club</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <!-- Compiled SCSS -->
+    <link rel="stylesheet" href="scss/main.css" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/958651474f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- 
+      Navbar Elements
+    ----------------------------------------------->
+
+    <!-- Box navbar -->
+    <div class="navbar-box unscrolled">
+      <div class="navbar-box__logo">
+        <img src="assets/logo_coloured.png" alt="logo-ssc" />
+      </div>
+      <div class="navbar-box__btn">
+        <p id="menu-text">MENU</p>
+        <div class="navbar-box__items" id="nav-box-items"></div>
+        <button class="btn">
+          <i class="fas fa-chevron-down" id="menu-btn"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Unscrolled Search Icon -->
+    <div class="search-box unscrolled">
+      <input class="d-none" id="search-box-input" type="text" />
+      <button class="btn" id="search-box-btn">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Scrolled Navbar -->
+    <header class="custom-header">
+      <div class="custom-container">
+        <nav class="custom-navbar">
+          <div class="custom-navbar__brand">
+            <!-- logo -->
+            <div class="nav-logo">
+              <a href="#">
+                <img src="assets/logo_coloured.png" alt="logo-ssc" />
+              </a>
+            </div>
+            <!-- search btn -->
+            <div class="search-form" id="search-form-mobile">
+              <form>
+                <input
+                  type="text"
+                  placeholder="What are you looking for ? ..."
+                />
+                <button type="submit" class="btn">Search</button>
+              </form>
+            </div>
+            <div class="nav-buttons">
+              <button id="search-btn-mobile" class="btn">
+                <i class="fas fa-search"></i>
+              </button>
+
+              <button id="bars-btn" class="btn">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+            <!-- bars Icon -->
+          </div>
+
+          <!-- Navbar Lists -->
+          <div class="custom-navbar__list" id="nav-list-general"></div>
+        </nav>
+      </div>
+    </header>
+    <!-- Scrolled Navbar -->
+
+    <div class="backdrop"></div>
+    <div class="sidedrawer"></div>
+
+    <!-- 
+      Navbar Elements Ends
+    ----------------------------------------------->
+
+    <!-- 
+      Owl Carousels
+    ----------------------------------------------->
+    <div class="owl-carousel owl-theme owl-loaded hero-component">
+      <div class="owl-stage-outer">
+        <div class="owl-stage">
+          <div class="owl-item hero-component__item">
+            <img src="assets/carousels/home-1.png" alt="cool guy wearing swimsuit" />
+          </div>
+          <div class="owl-item hero-component__item">
+            <img src="assets/carousels/home-2.png" alt="kids diving together" />
+          </div>
+          <div
+            class="owl-item hero-component__item"
+            data-videosrc="assets/carousels/video-1.mp4"
+          ></div>
+          <div
+            class="owl-item hero-component__item"
+            data-videosrc="assets/carousels/video-2.mp4"
+          ></div>
+        </div>
+      </div>
+
+      <div class="owl-dots">
+        <div class="owl-dot active"><span></span></div>
+        <div class="owl-dot"><span></span></div>
+        <div class="owl-dot"><span></span></div>
+      </div>
+    </div>
+
+    <!-- 
+      Owl Carousels
+    ----------------------------------------------->
+
+    <!-- Jumbo Text -->
+    <div class="jumbo-text">
+      <h1>The Premier Family Club</h1>
+      <h3>Where people make the difference</h3>
+    </div>
+    <!-- Jumbo Text -->
+
+
+    <!-- Main Elements -->
+    <main>
+      <div class="custom-container ">
+        <div class="tabs-container">
+          <ul class="nav nav-pills nav-fill">
+            <li class="nav-item ">
+              <a class="nav-link active tab-item" onclick="changeActiveTab('featured')" >Featured</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link tab-item" onclick="changeActiveTab('events')" >Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tab-item" onclick="changeActiveTab('publication')" >Publication</a>
+            </li>
+          </ul>
+        </div>
+
+        <section id="post-section">
+          <div class="row mt-5" id="post-cards">
+            <div class="lds-dual-ring"></div>
+            <!-- posts are inserted using javascript  -->
+          </div>
+        </section>
+
+        <section id="news-section">
+          <div class="upcoming-news d-flex justify-space-between align-items-center">
+            <h2 class="bg-blue px-1 py-2 text-white"  >Upcoming News</h2>
+            <p class="mx-3 w-75">SALE ORDINARY MEMBERSHIP AT THE CLUB</p>
+            <span class="d-block bg-primary" style="width: 10px; height: 30px;"></span>
+          </div>
+          <div class="news-details">
+            <p>We are pleased to inform you that Members can now use their Credit Cards to make purchase at the week-end Bazaar stalls <a href="#">Read more</a> </p>
+            <p>Come out and dance to a live and have the time of your life. Gentlemen, this is a chance to wear your tuxedos, ladies find your little black dress that you have always wanted to swear <a href="#">Read more</a> </p>
+          </div>
+          <div class="other-news my-5">
+            <h2 class="text-blue font-weight-bold">NEWS</h2>
+            <div class="news-wrapper row mt-4">
+              <div class="col-md-6">
+                <div class="news-comp">
+                  <small class="news-comp__date">
+                    15 September 2015
+                  </small>
+                  <p class="news-comp__title" >
+                    THE PALMS OPEN FOR BREAKFAST
+                  </p>
+                  <p  class="news-comp__excerpt">
+                    Please be informed that due to the haze. breakfast will be served at The Palms from <strong>8:00 a.m to 10:45 a.m  </strong> . Members are to observe the dress code required at The Palms 
+
+                    <br>
+                    Dress Code at The Palms
+                    <br>
+                    Solied or wet clothing and swimwear are not allowed.
+                  </p>
+
+                </div>
+                
+              </div>
+              <div class="col-md-6">
+                <div class="news-comp">
+                  <small class="news-comp__date">
+                    10 September 2015
+                  </small>
+                  <p class="news-comp__title" >
+                    PRO SHOP OPERATION HOURS
+                  </p>
+                  <p  class="news-comp__excerpt">
+                    Please be informed of the Pro Shop's new operating hours.
+                    <br>
+                    <ul>
+                      <li>
+                        Monday - Wednesday & Friday : 3pm - 8pm
+                      </li>
+                      <li>
+                        Saturday & Sunday : 12pm - 8pm
+                      </li>
+                      <li>
+                        Thursday : CLOSED
+                      </li>
+                    </ul> 
+                    
+
+                  </p>
+
+                </div>
+                
+              </div>
+            </div>
+            <div class="news-wrapper row mt-4 d-none" id="more-content">
+              <div class="col-md-6">
+                <div class="news-comp">
+                  <small class="news-comp__date">
+                    15 September 2015
+                  </small>
+                  <p class="news-comp__title" >
+                    Possimus, adipisci corrupti reiciendis
+                  </p>
+                  <p  class="news-comp__excerpt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima enim rerum cum at ipsa aperiam? Possimus, adipisci corrupti reiciendis ea ducimus obcaecati odio soluta sint doloribus? Labore, esse, magni quam sequi fugiat impedit deserunt, nihil temporibus qui molestiae expedita.
+                  </p>
+
+                </div>
+                
+              </div>
+              <div class="col-md-6">
+                <div class="news-comp">
+                  <small class="news-comp__date">
+                    10 September 2015
+                  </small>
+                  <p class="news-comp__title" >
+                    Lorem ipsum dolor sit amet consectetur 
+                  </p>
+                  <p  class="news-comp__excerpt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quidem id voluptatem quas mollitia quod ullam eaque! Similique optio est quibusdam veniam, suscipit architecto eligendi laborum ipsa reiciendis aliquid, possimus quasi. Ipsum perferendis quas vitae debitis et, provident eos similique.
+                  </p>
+
+                </div>
+                
+              </div>
+            </div>
+            <div class="text-center"> 
+              <button class="btn text-blue" id="read-more-btn">  Read More <i class="fas fa-plus" id="plus-icon"></i> </button>
+            </div>
+          </div>
+        </section>
+    </main>
+    <!-- Main Elements -->
+    
+    
+    
+
+
+
+
+    <!-- 
+      Footer  
+      ------------------------------------------->
+      <footer class="bg-yellow py-3">
+        <div class="custom-container">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="company-identity d-flex my-2">
+              <div class="logo mr-2">
+                <img class="img-fluid" width="120" src="assets/logo_yellow.png" alt="">
+              </div>
+              <div class="address mt-2">
+                <p>45 Tanjong Rhu Road <br> Singapore 436899</p>
+               
+                <p class="m-0">Tel : (65) 6342 3600</p>
+                <p class="m-0">Fax : (65) 6344 4476</p>
+
+              </div>
+            </div>
+            <div class="maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.796200216831!2d103.87926341415917!3d1.2969442621058747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da185aea670045%3A0x592f2a9de95da38e!2sSingapore%20Swimming%20Club!5e0!3m2!1sen!2sid!4v1591204543144!5m2!1sen!2sid" width="300" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="newsletter mt-4">
+              <h4>Email Newsletters</h4>
+              <p class="m-0" >Subscribe to receive news in your inbox</p>
+              <form>
+                <div class="form-group" style="max-width: 200px;">
+                 
+                  <input type="email" class="form-control" id="email" placeholder="Email Address">
+                  <button class="btn bg-blue d-block text-white w-100 my-2 text-left">SUBSCRIBE</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mt-4">
+            <div class="footer-nav">
+              <ul>  
+                <li><a href="#">Home</a></li>
+                <li>
+                  <ul class="mt-3">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Brief History</a></li>
+                    <li><a href="#">Club Milestones</a></li>
+                    <li><a href="#">Swimming Milestones</a></li>
+                    <li><a href="#">Management Committee  & Club Management</a></li>
+                    <li ><a href="#">Club Directory</a></li>
+                  </ul>
+                </li>
+                
+                
+                 
+                <li class="my-3"><a href="#">Club Buzz</a></li>
+                <li>
+                  <ul class="mt-3">
+                    <li><a href="#">Facilities</a></li>
+                  <li><a href="#">Sport</a></li>
+                  <li><a href="#">General</a></li>
+                  </ul>
+                </li>
+                
+               
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mt-4">
+            <div class="footer-nav">
+              <ul>
+                <li>
+                  <ul><li><a href="#">Membership</a></li></ul>
+                  <ul><li><a href="#">Membership Schemes</a></li></ul>
+                  <ul><li><a href="#">Reciprocal Schemes</a></li></ul>
+                  <ul><li><a href="#">Golfing Membership </a></li></ul>
+                  <ul><li><a href="#">Transfer Procedures & FAQ</a></li></ul>
+                  <ul><li><a href="#">Find Out More</a></li></ul>
+
+                </li>
+                <li class="my-3"><a href="#">Membership</a></li>
+
+                <ul class="mt-3">
+                  <li><a href="#">Photo Gallery</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Swimming</a></li>
+                <li><a href="#">Social</a></li>
+                </ul>
+               
+              
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mt-4">
+            <div class="footer-nav">
+              <ul>
+                <li><a href="#">Wine and Dine</a></li>
+                <li><a href="#">Jackson Miller</a></li>
+                <li><a href="#">The Palms</a></li>
+                <li><a href="#">Jade Phoenix</a></li>
+                <li><a href="#">Cabana</a></li>
+                <li><a href="#">Le Petit Tressor</a></li>
+                <li><a href="#">The Delicatesen</a></li>
+                <li><a href="#">Fountain Bar</a></li>
+                <li><a href="#">D'Tanjong</a></li>
+                <li><a href="#">D'Sports</a></li>
+                <li><a href="#">D'Galaxy</a></li>
+                <li><a href="#">Straits of Malacca</a></li>
+              </ul>
+
+              <ul class="mt-3">
+                <li><a href="#">What's new</a></li>
+                <li><a href="#">Sport</a></li>
+                <li><a href="#">Swimming</a></li>
+                <li><a href="#">Social</a></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+      </footer>
+
+
+    
+
+    <!-- 
+      Javascript Tags 
+    ----------------------------------------------->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/components.js"> </script>
+  </body>
+</html>

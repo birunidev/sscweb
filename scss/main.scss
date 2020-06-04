@@ -1,0 +1,53 @@
+// font
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Condensed:wght@300&family=Roboto:wght@100;300;400&display=swap");
+
+// base
+@import "./utils/normalize";
+@import "./utils/variables";
+@import "./utils/mixins";
+
+// components
+@import "./components";
+@import "./components/loading";
+
+// layouts
+@import "./layout/footer";
+@import "./layout/navbar";
+@import "./layout/sidedrawer.scss";
+
+// CSS Reset
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 200vh;
+  // overflow-x: hidden;
+}
+button {
+  cursor: pointer;
+}
+
+.owl-carousel .owl-item {
+  max-height: 250px;
+  width: 100%;
+  @include tablet-portrait-up {
+    max-height: 400px;
+  }
+  @include desktop {
+    max-height: 600px;
+  }
+
+  video {
+    @include tablet-portrait-up {
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+}
+
+main {
+  margin-top: -100px;
+}

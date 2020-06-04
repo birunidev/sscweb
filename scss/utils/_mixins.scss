@@ -1,0 +1,44 @@
+/* media query mixins */
+
+// phone only media query
+@mixin phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+// tablet potrait media query
+@mixin tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+// tablet landscape media query
+@mixin tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+// desktop media query
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// large desktop media query
+@mixin large-desktop {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+// flex mixins
+
+@mixin displayFlex($justifyContent) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: center;
+}

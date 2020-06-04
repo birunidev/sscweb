@@ -52,7 +52,7 @@ function renderAllPost() {
     <div class="post-card">
       <a href="#">
         <div class="post-card__image">
-          <img src="assets/image-${post.id.toString()}.png" alt="${
+          <img width="250" height="220" src="assets/image-${post.id.toString()}.png" alt="${
       post.imgAlt
     }">
         </div>

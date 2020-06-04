@@ -182,6 +182,14 @@
   text-align: center;
   margin: 10px auto;
 
+  a {
+    text-decoration: none;
+    a:hover {
+      text-decoration: underline !important;
+      color: $primaryBlue;
+    }
+  }
+
   @include desktop {
     margin: 10px 0px;
   }

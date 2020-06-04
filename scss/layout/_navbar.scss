@@ -27,6 +27,8 @@
       img {
         cursor: pointer;
         width: 100%;
+        max-width: 100%;
+        height: auto;
       }
     }
     .nav-buttons {
@@ -66,7 +68,10 @@
   .nav-item {
     &__link {
       color: black;
+      text-decoration: none;
       &:hover {
+        text-decoration: underline;
+
         color: $primaryBlue;
       }
     }

@@ -5,6 +5,10 @@
     height: auto;
   }
   a {
+    text-decoration: none;
     color: black;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

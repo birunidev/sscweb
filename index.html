@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="We are a premier recreational club that offers swimming classes and other sports facilities exclusive to our members. Visit our site to learn more!"
+    />
     <title>Home | Singapore Swimming Club</title>
 
     <!-- Bootstrap CSS -->
@@ -25,18 +29,15 @@
     <!-- Navbar Elements -->
 
     <!-- Box navbar -->
-    <div class="navbar-box unscrolled" aria-label="navigationmenu">
+    <div class="navbar-box unscrolled">
       <div class="navbar-box__logo">
         <img src="assets/logo_coloured.png" alt="logo-ssc" />
       </div>
       <div class="navbar-box__btn">
         <p id="menu-text">MENU</p>
-        <div
-          class="navbar-box__items"
-          id="nav-box-items"
-          aria-label="menus"
-        ></div>
+        <div class="navbar-box__items" id="nav-box-items"></div>
         <button
+          type="button"
           class="btn"
           id="menu-btn"
           aria-controls="nav-box-items"
@@ -61,10 +62,13 @@
         type="text"
       />
       <button
+        type="button"
         class="btn"
+        aria-label="search-button"
         aria-expanded="false"
         aria-controls="search-box-input"
         id="search-box-btn"
+        tabindex="0"
       >
         <i class="fas fa-search"></i>
       </button>
@@ -84,9 +88,14 @@
             <!-- search btn -->
             <div class="search-form" id="search-form-mobile">
               <form>
-                <label for="search-input-2"></label>
+                <label
+                  for="search-input-2"
+                  style="width: 0; visibility: hidden;"
+                  >Search</label
+                >
                 <input
                   id="search-input-2"
+                  aria-label="search-input"
                   type="text"
                   placeholder="What are you looking for ? ..."
                 />
@@ -95,19 +104,23 @@
             </div>
             <div class="nav-buttons">
               <button
+                type="button"
                 id="search-btn-mobile"
                 aria-controls="search-form-mobile"
                 aria-expanded="false"
                 class="btn"
+                tabindex="0"
               >
                 <i class="fas fa-search"></i>
               </button>
 
               <button
+                type="button"
                 id="bars-btn"
                 aria-expanded="false"
                 aria-controls="side-drawer"
                 class="btn"
+                tabindex="0"
               >
                 <i class="fas fa-bars"></i>
               </button>
@@ -122,13 +135,12 @@
     </header>
     <!-- Scrolled Navbar -->
 
-    <div class="backdrop"></div>
+    <div class="backdrop" role="button" tabindex="0"></div>
     <div class="sidedrawer" id="side-drawer"></div>
 
     <!-- Navbar Elements Ends -->
 
     <!-- Owl Carousels -->
-
     <div class="owl-carousel owl-theme owl-loaded hero-component">
       <div class="owl-stage-outer">
         <div class="owl-stage">
@@ -174,23 +186,31 @@
         <div class="tabs-container">
           <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
-              <a
-                class="nav-link active tab-item"
+              <button
+                type="button"
+                class="btn btn-block nav-link active tab-item"
                 onclick="changeActiveTab('featured')"
-                >Featured</a
               >
+                Featured
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link tab-item" onclick="changeActiveTab('events')"
-                >Events</a
+              <button
+                type="button"
+                class="btn btn-block nav-link tab-item"
+                onclick="changeActiveTab('events')"
               >
+                Events
+              </button>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link tab-item"
+              <button
+                type="button"
+                class="btn btn-block nav-link tab-item"
                 onclick="changeActiveTab('publication')"
-                >Publication</a
               >
+                Publication
+              </button>
             </li>
           </ul>
         </div>

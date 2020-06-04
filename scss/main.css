@@ -927,7 +927,7 @@ img {
 }
 
 .nav-items .nav-item__link:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #0171bb;
 }
 
